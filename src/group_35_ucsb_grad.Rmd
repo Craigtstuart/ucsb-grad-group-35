@@ -21,7 +21,8 @@ ucsb_grad <- read_csv(here("data", "ucsb_grad_data.csv"))
 ```{r}
 ggplot(ucsb_grad, aes(x = year_abbr, y = domestic_enrollment)) +
   geom_col(aes(fill = ethnicity), position = "fill") +
-  labs(x = "Year", y = "Proportion of Domestic Graduates")
+  labs(x = "Year", y = "Proportion of Domestic Graduates", title = "Domestic UCSB gradute student enrollment by ethnicity (2008-2019") +
+  theme_minimal()
 ```
 
 
